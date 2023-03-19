@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int i, j, u, k=1, sum=0, f, space;
+   
+    printf("맨 밑줄의 합이 얼마를 넘어가면 중단시킬까요?");
+    scanf("%d", &u);
+   
+    for(i=1; f<u; i++) {
+        space = u-i;
+        for (j = 1; j <= space; j++)
+            printf(" ");
+        for(j=1; j<=i; j++) {
+            sum = k;
+            sum = sum + j;
+            printf("%3d", k++);
+            printf("'%d'", sum);
+        }
+        printf("\n");
+        f = sum;
+        sum = 0;
+    }
+   
+    return 0;
+}
