@@ -1,3 +1,4 @@
+//숫자가 이어지고, 가운데 정렬이 돼 있고, 맨 밑줄의 합이 500을 넘으면 중단되는 피라미드
 #include <stdio.h>
 
 int main() {
@@ -6,19 +7,52 @@ int main() {
     printf("맨 밑줄의 합이 얼마를 넘어가면 중단시킬까요?");
     scanf("%d", &u);
    
-    for(i=1; f<u; i++) {
+    for(i=1; f<u-1; i++) {
         space = u-i;
+        sum = k;
         for (j = 1; j <= space; j++)
             printf(" ");
+            
         for(j=1; j<=i; j++) {
-            sum = k;
-            sum = sum + j;
+            
             printf("%3d", k++);
-            printf("'%d'", sum);
+            sum = sum + k;
+            
+            
         }
         printf("\n");
         f = sum;
-        sum = 0;
+        
+    }
+   
+    return 0;
+}
+//합을 확인하는 코드
+#include <stdio.h>
+
+int main() {
+    int i, j, u, k=1, sum=0, f, space;
+   
+    printf("맨 밑줄의 합이 얼마를 넘어가면 중단시킬까요?");
+    scanf("%d", &u);
+   
+    for(i=1; f<u-1; i++) {
+        space = u-i;
+        sum = k;
+        for (j = 1; j <= space; j++)
+            printf(" ");
+            
+        for(j=1; j<=i; j++) {
+            
+            printf("'%3d'", sum);
+            printf("%d", k++);
+            sum = sum + k;
+            
+            
+        }
+        printf("\n");
+        f = sum;
+        
     }
    
     return 0;
