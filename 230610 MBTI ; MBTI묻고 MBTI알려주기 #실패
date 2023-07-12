@@ -56,12 +56,12 @@ int main()
     an = getchar();
     while(getchar() != '\n');
     
-    if (an == 'n' || an == 'N') 
+    if (an == 'p' || an == 'P') 
     {
         d += 10;
     }
     
-    else if (an == 's' || an == 'S')
+    else if (an == 'j' || an == 'J')
     {
         d -= 10;
     }
