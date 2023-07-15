@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int getStrokeCount(char ch) {
+    // 획수를 저장한 배열을 사용하여 각 글자의 획수를 반환하는 함수
+    // 필요에 따라 글자의 획수를 저장한 배열을 만들어 사용해야 합니다.
+    // 아래는 예시로 몇 개의 글자에 대한 획수만 포함한 배열입니다.
+    // 실제 획수 정보를 담은 배열로 대체해야 합니다.
+    char strokeCount[] = {'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', 'ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ', 'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ', 'ㅔ', 'ㅖ', 'ㅐ', 'ㅒ'};
+    int count = 0;
+
+    // 주어진 글자의 획수를 찾아 반환합니다.
+    for (int i = 0; i < sizeof(strokeCount) / sizeof(strokeCount[0]); i++) {
+        if (ch == strokeCount[i]) {
+            // 획수를 찾았으면 해당 획수를 반환합니다.
+            count = i + 1;
+            break;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    // 이름을 입력받아 처리합니다.
+    char firstName1[10], firstName2[10];
+    printf("첫 번째 이름을 입력하세요: ");
+    scanf("%s", firstName1);
+    printf("두 번째 이름을 입력하세요: ");
+    scanf("%s", firstName2);
+
+    // 각 이름의 첫 번째, 두 번째, 세 번째 글자의 획수를 계산합니다.
+    int strokeCount1_1 = getStrokeCount(firstName1[0]);
+    int strokeCount1_2 = getStrokeCount(firstName1[1]);
+    int strokeCount1_3 = getStrokeCount(firstName1[2]);
+
+    int strokeCount2_1 = getStrokeCount(firstName2[0]);
+    int strokeCount2_2 = getStrokeCount(firstName2[1]);
+    int strokeCount2_3 = getStrokeCount(firstName2[2]);
+
+    // 획수를 더하고 일의 자리 숫자를 구합니다.
+    int step5 = (strokeCount1_1 * 10 + strokeCount2_1) % 10;
+    int step6 = (strokeCount1_2 * 10 + strokeCount2_2) % 10;
+    int step7 = (strokeCount1_3 * 10 + strokeCount2_3) % 10;
+
+    int step8 = (step5 * 10 + step6) % 10;
+    int step9 = (step6 * 10 + step7) % 10;
+
+    int step10 = (step8 * 10) + step9;
+
+    // 결과를 출력합니다.
+    int result = step10;
+    printf("결과: %d\n", result);
+
+    return 0;
+}
