@@ -39,17 +39,49 @@ int main() {
 
     // 획수를 더하고 일의 자리 숫자를 구합니다.
     int step5 = (strokeCount1_1 * 10 + strokeCount2_1) % 10;
-    int step6 = (strokeCount1_2 * 10 + strokeCount2_2) % 10;
-    int step7 = (strokeCount1_3 * 10 + strokeCount2_3) % 10;
+    
+    int step6 = (strokeCount2_1 * 10 + strokeCount1_2) % 10;
+    
+    int step7 = (strokeCount1_2 * 10 + strokeCount2_2) % 10;
+    
+    int step8 = (strokeCount2_2 * 10 + strokeCount1_3) % 10;
+    
+    int step9 = (strokeCount1_3 * 10 + strokeCount2_3) % 10;
 
-    int step8 = (step5 * 10 + step6) % 10;
-    int step9 = (step6 * 10 + step7) % 10;
 
-    int step10 = (step8 * 10) + step9;
+
+    int step10 = (step5 * 10 + step6) % 10;
+    
+    int step11 = (step6 * 10 + step7) % 10;
+    
+    int step12 = (step7 * 10 + step8) % 10;
+    
+    int step13 = (step8 * 10 + step9) % 10;
+    
+    
+    
+    int step14 = (step10 * 10 + step11) % 10;
+    
+    int step15 = (step11 * 10 + step12) % 10;
+    
+    int step16 = (step12 * 10 + step13) % 10;
+    
+    
+    int step17 = (step14 * 10 + step15) % 10;
+    
+    int step18 = (step15 * 10 + step16) % 10;
+
+
+    int step19 = (step17 * 10) + step18;
 
     // 결과를 출력합니다.
-    int result = step10;
+    int result = step19;
     printf("결과: %d\n", result);
+    printf("%d\n", strokeCount1_1);
+    printf("%d\n", strokeCount1_2);
+    printf("%d\n", strokeCount1_3);
+    printf("%d\n", strokeCount2_1);
+    
 
     return 0;
 }
