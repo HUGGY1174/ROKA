@@ -226,9 +226,13 @@ int main()
     {
         M[0] = 'E';
     }
-    else 
+    else if (ei < 50)
     {
         M[0] = 'I';
+    }
+    else
+    {
+        M[0] = '■';
     }
     
     // MBTI 두 번째 자리 알려주기
@@ -236,30 +240,45 @@ int main()
     {
         B[0] = 'N';
     }
-    else 
+    else if (ns < 50)
     {
         B[0] = 'S';
     }
+    else
+    {
+        B[0] = '■';
+    }
+    
     
     // MBTI 세 번째 자리 알려주기
     if (ft > 50)
     {
         T[0] = 'F';
     }
-    else 
+    else if (ft < 50)
     {
         T[0] = 'T';
     }
+    else
+    {
+        T[0] = '■';
+    }
+    
 
     // MBTI 네 번째 자리 알려주기
     if (pj > 50)
     {
         I[0] = 'P';
     }
-    else 
+    else if (pj < 50)
     {
         I[0] = 'J';
     }
+    else
+    {
+        I[0] = '■';
+    }
+    
     
     M[1] = B[1] = T[1] = I[1] = '\0'; // 배열의 끝을 나타내는 널 종료 문자 추가
 
@@ -270,115 +289,228 @@ int main()
     //EI 수치
     if (ei == 0)
     {
-        printf("◀◀◀◀◀▷▷▷▷▷\/n");
+        printf(" I ◀◀◀◀◀▷▷▷▷▷ E\n");
     }
     
     if (ei == 10)
     {
-        printf("◁◀◀◀◀▷▷▷▷▷\n");
+        printf(" I ◁◀◀◀◀▷▷▷▷▷ E\n");
     }
     
     if (ei == 20)
     {
-        printf("◁◁◀◀◀▷▷▷▷▷\n");
+        printf(" I ◁◁◀◀◀▷▷▷▷▷ E\n");
     }
         
     if (ei == 30)
     {
-        printf("◁◁◁◀◀▷▷▷▷▷\n");
+        printf(" I ◁◁◁◀◀▷▷▷▷▷ E\n");
     }
     
     if (ei == 40)
     {
-        printf("◁◁◁◁◀▷▷▷▷▷\n");
+        printf(" I ◁◁◁◁◀▷▷▷▷▷ E\n");
     }
     
     if (ei == 50)
     {
-        printf("◁◁◁◁◁▷▷▷▷▷\n");
+        printf(" I ◁◁◁◁◁▷▷▷▷▷ E\n");
     }
     
     if (ei == 60)
     {
-        printf("◁◁◁◁◁▶▷▷▷▷\n");
+        printf(" I ◁◁◁◁◁▶▷▷▷▷ E\n");
     }
     
     if (ei == 70)
     {
-        printf("◁◁◁◁◁▶▶▷▷▷\n");
+        printf(" I ◁◁◁◁◁▶▶▷▷▷ E\n");
     }
     
     if (ei == 80)
     {
-        printf("◁◁◁◁◁▶▶▶▷▷\n");
+        printf(" I ◁◁◁◁◁▶▶▶▷▷ E\n");
     }
     
     if (ei == 90)
     {
-        printf("◁◁◁◁◁▶▶▶▶▷\n");
+        printf(" I ◁◁◁◁◁▶▶▶▶▷ E\n");
     }
 
     if (ei == 100)
     {
-        printf("◁◁◁◁◁▶▶▶▶▶\n");
+        printf(" I ◁◁◁◁◁▶▶▶▶▶ E\n");
     }
+    
+    
+    
     
     //NS 수치
     if (ns == 0)
     {
-        printf("◀◀◀◀◀▷▷▷▷▷\n");
+        printf(" S ◀◀◀◀◀▷▷▷▷▷ N\n");
     }
     
     if (ns == 10)
     {
-        printf("◁◀◀◀◀▷▷▷▷▷\n");
+        printf(" S ◁◀◀◀◀▷▷▷▷▷ N\n");
     }
     
     if (ns == 20)
     {
-        printf("◁◁◀◀◀▷▷▷▷▷\n");
+        printf(" S ◁◁◀◀◀▷▷▷▷▷ N\n");
     }
         
     if (ns == 30)
     {
-        printf("◁◁◁◀◀▷▷▷▷▷\n");
+        printf(" S ◁◁◁◀◀▷▷▷▷▷ N\n");
     }
     
     if (ns == 40)
     {
-        printf("◁◁◁◁◀▷▷▷▷▷\n");
+        printf(" N ◁◁◁◁◀▷▷▷▷▷ N\n");
     }
     
     if (ns == 50)
     {
-        printf("◁◁◁◁◁▷▷▷▷▷\n");
+        printf(" S ◁◁◁◁◁▷▷▷▷▷ N\n");
     }
     
     if (ns == 60)
     {
-        printf("◁◁◁◁◁▶▷▷▷▷\n");
+        printf(" S ◁◁◁◁◁▶▷▷▷▷ N\n");
     }
     
     if (ns == 70)
     {
-        printf("◁◁◁◁◁▶▶▷▷▷\n");
+        printf(" S ◁◁◁◁◁▶▶▷▷▷ N\n");
     }
     
     if (ns == 80)
     {
-        printf("◁◁◁◁◁▶▶▶▷▷\n");
+        printf(" S ◁◁◁◁◁▶▶▶▷▷ N\n");
     }
     
     if (ns == 90)
     {
-        printf("◁◁◁◁◁▶▶▶▶▷\n");
+        printf(" S ◁◁◁◁◁▶▶▶▶▷ N\n");
     }
 
     if (ns == 100)
     {
-        printf("◁◁◁◁◁▶▶▶▶▶\n");
+        printf(" S ◁◁◁◁◁▶▶▶▶▶ N\n");
     }
 
+
+
+    //FT 수치
+        if (ft == 10)
+    {
+        printf(" T ◁◀◀◀◀▷▷▷▷▷ F\n");
+    }
+    
+    if (ft == 20)
+    {
+        printf(" T ◁◁◀◀◀▷▷▷▷▷ F\n");
+    }
+        
+    if (ft == 30)
+    {
+        printf(" T ◁◁◁◀◀▷▷▷▷▷ F\n");
+    }
+    
+    if (ft == 40)
+    {
+        printf(" T ◁◁◁◁◀▷▷▷▷▷ F\n");
+    }
+    
+    if (ft == 50)
+    {
+        printf(" T ◁◁◁◁◁▷▷▷▷▷ F\n");
+    }
+    
+    if (ft == 60)
+    {
+        printf(" T ◁◁◁◁◁▶▷▷▷▷ F\n");
+    }
+    
+    if (ft == 70)
+    {
+        printf(" T ◁◁◁◁◁▶▶▷▷▷ F\n");
+    }
+    
+    if (ft == 80)
+    {
+        printf(" T ◁◁◁◁◁▶▶▶▷▷ F\n");
+    }
+    
+    if (ft == 90)
+    {
+        printf(" T ◁◁◁◁◁▶▶▶▶▷ F\n");
+    }
+
+    if (ft == 100)
+    {
+        printf(" T ◁◁◁◁◁▶▶▶▶▶ F\n");
+    }
+    
+    
+    
+        //PJ 수치
+    if (pj == 10)
+    {
+        printf(" J ◁◀◀◀◀▷▷▷▷▷ P\n");
+    }
+    
+    if (pj == 20)
+    {
+        printf(" J ◁◁◀◀◀▷▷▷▷▷ P\n");
+    }
+        
+    if (pj == 30)
+    {
+        printf(" J ◁◁◁◀◀▷▷▷▷▷ P\n");
+    }
+    
+    if (pj == 40)
+    {
+        printf(" J ◁◁◁◁◀▷▷▷▷▷ P\n");
+    }
+    
+    if (pj == 50)
+    {
+        printf(" J ◁◁◁◁◁▷▷▷▷▷ P\n");
+    }
+    
+    if (pj == 60)
+    {
+        printf(" J ◁◁◁◁◁▶▷▷▷▷ P\n");
+    }
+    
+    if (pj == 70)
+    {
+        printf(" J ◁◁◁◁◁▶▶▷▷▷ P\n");
+    }
+    
+    if (pj == 80)
+    {
+        printf(" J ◁◁◁◁◁▶▶▶▷▷ P\n");
+    }
+    
+    if (pj == 90)
+    {
+        printf(" J ◁◁◁◁◁▶▶▶▶▷ P\n");
+    }
+
+    if (pj == 100)
+    {
+        printf(" J ◁◁◁◁◁▶▶▶▶▶ P\n");
+    }
+    
+    
+    
+    
+    
     printf("%d%d%d%d ", ei, ns, ft, pj);
     return 0;
 }
